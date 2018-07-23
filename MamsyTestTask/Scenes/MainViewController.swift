@@ -15,7 +15,7 @@ protocol MainViewControllerInput {
 }
 
 protocol MainViewControllerOutput {
-    func getResult(number: PrimeNumber)
+    func getResult(number: Int)
 }
 
 class MainViewController: UIViewController, MainViewControllerInput {
@@ -55,7 +55,11 @@ class MainViewController: UIViewController, MainViewControllerInput {
     // MARK: UI events
     
     @IBAction func getSumResultAction(_ sender: UIButton) {
-        output?.getResult(number: PrimeNumber(maxNumber: Int(maxNumberTextField.text!)!, numbersList: []))
+        guard let text = maxNumberTextField.text, let num = Int(text) else {
+            print("maxNumberTextField должен содержать значение")
+            return
+        }
+        output?.getResult(number: num)
     }
 }
 

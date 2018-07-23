@@ -12,14 +12,14 @@ import Foundation
 
 class MainWorker {
 
-    func calculate(number: PrimeNumber) -> PrimeNumber {
+    func calculate(number: Int) -> PrimeNumber {
         var result = [Int]()
-        guard number.maxNumber >= 2 else { return PrimeNumber(maxNumber:0, numbersList: [])}
-        var composite = [Bool](repeating: false, count: number.maxNumber + 1)
-        for i in 2...number.maxNumber {
+        guard number >= 2 else { return PrimeNumber(maxNumber:0, numbersList: [])}
+        var composite = [Bool](repeating: false, count: number + 1)
+        for i in 2...number {
             if !composite[i] {
                 result.append(i)
-                for multiple in stride(from: i * i, through: number.maxNumber, by: i) {
+                for multiple in stride(from: i * i, through: number, by: i) {
                     composite[multiple] = true
                 }
             }

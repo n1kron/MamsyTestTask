@@ -9,7 +9,7 @@
 //  https://github.com/HelmMobile/clean-swift-templates
 
 protocol MainInteractorInput {
-    func getResult(number: PrimeNumber)
+    func getResult(number: Int)
 }
 
 protocol MainInteractorOutput {
@@ -28,7 +28,7 @@ class MainInteractor: MainInteractorInput, MainDataSource, MainDataDestination {
     var output: MainInteractorOutput?
     
     // MARK: Business logic
-    func getResult(number: PrimeNumber) {
+    func getResult(number: Int) {
         let worker = MainWorker()
         let data = worker.calculate(number: number)
         let response = MainScene.getResult.Response(primeNumber: data)

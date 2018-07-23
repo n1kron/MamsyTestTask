@@ -111,13 +111,11 @@
 		99CCF4F42103820D00F57288 /* MamsyTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				99CCF4F52103820D00F57288 /* AppDelegate.swift */,
+				99CCF5012103820F00F57288 /* Info.plist */,
 				99CCF5262103892900F57288 /* Model */,
 				99CCF5232103864A00F57288 /* Scenes */,
-				99CCF4F52103820D00F57288 /* AppDelegate.swift */,
-				99CCF4F92103820D00F57288 /* Main.storyboard */,
-				99CCF4FC2103820F00F57288 /* Assets.xcassets */,
-				99CCF4FE2103820F00F57288 /* LaunchScreen.storyboard */,
-				99CCF5012103820F00F57288 /* Info.plist */,
+				99CCF54B21064AB800F57288 /* Resources */,
 			);
 			path = MamsyTestTask;
 			sourceTree = "<group>";
@@ -160,6 +158,16 @@
 				99CCF52B21038AE100F57288 /* PrimeNumber.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		99CCF54B21064AB800F57288 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				99CCF4F92103820D00F57288 /* Main.storyboard */,
+				99CCF4FC2103820F00F57288 /* Assets.xcassets */,
+				99CCF4FE2103820F00F57288 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

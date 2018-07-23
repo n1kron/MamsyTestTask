@@ -12,7 +12,7 @@ import Foundation
 
 class MainWorker {
 
-    func calculations(number: PrimeNumber) -> PrimeNumber {
+    func calculate(number: PrimeNumber) -> PrimeNumber {
         var result = [Int]()
         guard number.maxNumber >= 2 else { return PrimeNumber(maxNumber:0, numbersList: [])}
         var composite = [Bool](repeating: false, count: number.maxNumber + 1)

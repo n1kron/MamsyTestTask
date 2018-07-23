@@ -30,7 +30,7 @@ class MainInteractor: MainInteractorInput, MainDataSource, MainDataDestination {
     // MARK: Business logic
     func getResult(number: PrimeNumber) {
         let worker = MainWorker()
-        let data = worker.calculations(number: number)
+        let data = worker.calculate(number: number)
         let response = MainScene.getResult.Response(primeNumber: data)
         output?.presentResult(response: response)
     }
